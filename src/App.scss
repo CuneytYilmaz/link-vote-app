@@ -3,6 +3,18 @@
     margin: 0 auto;
 }
 
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
 nav {
     .left {
         float: left;
