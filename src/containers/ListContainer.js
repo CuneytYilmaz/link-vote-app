@@ -95,9 +95,14 @@ class ListContainer extends Component {
                         ))}
                     </ul>
                 </div>
-                <div className='row'>
-                    <Paging />
-                </div>
+                
+                {links.length > 0 ? 
+                    <div className='row'>
+                        <Paging />
+                    </div> : 
+                    <div className='no-items'>No Item(s) found here. Click "Submit a Link" to start.</div> 
+                }
+                
             </div>
         )
     }
