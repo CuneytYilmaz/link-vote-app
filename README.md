@@ -1,68 +1,74 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Link-Vote-App Project
 
-## Available Scripts
+It is an application that you can add new links, up vote or down vote to existing links or remove a link from the list. In this application you can sort list by most-voted or less-voted. Also if you add too many links to the list, there is a pagination to group them.
 
-In the project directory, you can run:
+# Quickstart
 
-### `yarn start`
+### Install
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone Link-Vote-App project:
+```
+https://github.com/CuneytYilmaz/link-vote-app.git
+```
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Install project dependencies via npm:
+```
+npm install
+```
 
-### `yarn test`
+Start the development server:
+```
+npm start
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ # Pages
+ 
+1. **Link Lists No Items** : The first time there will be no items in the list. So in the beginning you will see this page.
 
-### `yarn build`
+<p align="center">
+<img src="https://github.com/CuneytYilmaz/link-vote-app/blob/master/src/img/home-no-items-screen.png" height="450"/>
+</p>
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Add Link View** : To add a new link you can use this form. There is a validation to add it. Name and URL cannot be empty, URL must be in web link format(contains http:// or https://) and new URL must not exists in the list.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+<p align="center">
+<img src="https://github.com/CuneytYilmaz/link-vote-app/blob/master/src/img/add-screen.png" height="450"/>
+</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Added Link View** : When you add the new link to the list, there is a message (toast) to show you the result.
 
-### `yarn eject`
+<p align="center">
+<img src="https://github.com/CuneytYilmaz/link-vote-app/blob/master/src/img/added-item-screen.png" height="450"/>
+</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. **Added Link View** : By default, links ordered by Last Added. But you can order the list by Most Voted or Less Voted options.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<p align="center">
+<img src="https://github.com/CuneytYilmaz/link-vote-app/blob/master/src/img/home-order-by-screen.png" height="450"/>
+</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. **Remove Link View** : If you hover the link, a remove button appears. You can delete link via this delete button.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<p align="center">
+<img src="https://github.com/CuneytYilmaz/link-vote-app/blob/master/src/img/home-remove-screen.png" height="450"/>
+</p>
 
-## Learn More
+6. **Remove Modal View** : When you click the delete button, the modal shows. You can cancel the process or delete the link by clicking the OK button in modal.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="center">
+<img src="https://github.com/CuneytYilmaz/link-vote-app/blob/master/src/img/home-remove-modal-screen.png" height="450"/>
+</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+7. **Removed Link View** : After the delete process, there is a message (toast) to show you the result. 
 
-### Code Splitting
+<p align="center">
+<img src="https://github.com/CuneytYilmaz/link-vote-app/blob/master/src/img/home-item-removed-screen.png" height="450"/>
+</p>
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+ # Contributing
 
-### Analyzing the Bundle Size
+Shaking-Tree-App was originally written and maintaned by Cuneyt Yilmaz. Many improvements and bugfixes were contributed by the [open source community](https://github.com/cuneytyilmaz/link-vote-app/graphs/contributors).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+ # License
 
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+MIT. Please see the [license file](LICENSE) for more information.
