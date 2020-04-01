@@ -1,24 +1,27 @@
 const STORAGE_KEY = 'LINK_VOTE_APP'
 
-export function getLinkListFromLocalStorage () {
-    let linkList = localStorage.getItem(STORAGE_KEY)
+export function _getLinkList () {
 
-      if (linkList === null) {
-        return []
+    // LocalStorage'dan datalari ceken bir Promise yaratiliyor
+    return new Promise((res,rej) => {
+      let linkList = localStorage.getItem(STORAGE_KEY)
+
+      if (linkList === null || linkList === 'undefined') {
+        linkList = []
       } 
       else {
-        return JSON.parse(linkList)
-    }
+        linkList = JSON.parse(linkList)
+      }
+
+      res(linkList)
+    })
 }
 
-  export function addLinkToLocalStorage (link) {
+// LocalStorage'a datalari set eden bir Promise yaratiliyor
+export function _setLinkList (linkList) {
 
-    return new Promise((res, rej) => {
-      let linkList = getLinkListFromLocalStorage()
-      linkList.push(link)
-      
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(linkList))
-      res(link)
-    })
-    
-  }
+  return new Promise((res, rej) => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(linkList))
+    res(linkList)
+  })
+}

@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import LoadingBar from 'react-redux-loading'
 import Nav from '../components/Nav'
 import ListContainer from './ListContainer'
 import AddLinkContainer from './AddLinkContainer'
@@ -9,13 +10,14 @@ class App extends Component {
     return (
       <Router>
       	<Fragment>
+          <LoadingBar className='loading-bar' />
           <div className='nav-container'>
             <Nav />
             <hr className='hr-line-color' />
           </div>
           <div className='container'>
             <Switch>
-              <Route path='/' exact component={AddLinkContainer} />
+              <Route path='/' exact component={ListContainer} />
               <Route path='/add' exact component={AddLinkContainer} />
               {/* <Route component={NotFound} /> */}
             </Switch>
