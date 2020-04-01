@@ -67,7 +67,7 @@ npm start
 
  # Contributing
 
-Shaking-Tree-App was originally written and maintaned by Cuneyt Yilmaz. Many improvements and bugfixes were contributed by the [open source community](https://github.com/cuneytyilmaz/link-vote-app/graphs/contributors).
+Link-Vote-App was originally written and maintaned by Cuneyt Yilmaz. Many improvements and bugfixes were contributed by the [open source community](https://github.com/cuneytyilmaz/link-vote-app/graphs/contributors).
 
  # License
 
