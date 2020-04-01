@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import LoadingBar from 'react-redux-loading'
 import Nav from '../components/Nav'
+import NotFound from '../components/NotFound'
 import ListContainer from './ListContainer'
 import AddLinkContainer from './AddLinkContainer'
 
@@ -19,7 +20,7 @@ class App extends Component {
             <Switch>
               <Route path='/' exact component={ListContainer} />
               <Route path='/add' exact component={AddLinkContainer} />
-              {/* <Route component={NotFound} /> */}
+              <Route component={NotFound} />
             </Switch>
           </div>
       	</Fragment>
